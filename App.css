@@ -126,9 +126,8 @@ USUARIOS
     width: 60%;
     margin: 20px auto 0; 
     
-    background-size: cover;
-    background-position: center;
-    height: 150px;
+    max-width: 200px;
+    height: 200px;
 }
 .nombre,
 .city{
@@ -267,8 +266,8 @@ LOGIN & REGISTRO FORM
 
 .login-form-btn,
 .registro-form-btn {
-    background-image: linear-gradient(to right,rgb(215, 136, 241),#CA49F5);
-    /* background-color: #CA49F5; */
+    /* background-image: linear-gradient(to right,rgb(215, 136, 241),#CA49F5); */
+    background-color: #CA49F5; 
     text-transform: uppercase;
     color: #FFFFFF;
     opacity: 100%;
