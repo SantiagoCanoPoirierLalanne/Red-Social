@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    min-width: 350px;
+    background-image: url(./imagenes/fondo.jfif); 
+    background-blend-mode: lighten;
+    font-family: 'Josefin Sans', cursive;
+}
+
+/***************
+HEADER & FOOTER 
+****************/
+
+.navbar {
+    text-decoration: none;
+}
+
+.header,
+.footer {
+    width: 100%;
+    /* background-color: #CA49F5; */
+    background-image: linear-gradient(to right ,rgb(215, 136, 241),#CA49F5);
+}
+.footer {
+    
+    clear: both;
+}
+.header-container{
+    width: 80%;
+    margin: 0px auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+@media (min-width: 900px) {
+    .header-container{
+        flex-direction: row;
+    }
+}
+
+.footer-container {
+    width: 80%;
+    margin: 0px auto;
+    padding: 20px 0;
+
+    text-align: center;
+    font-weight: bold;
+}
+.logo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+.header-img {
+    width: 30%;
+    max-height: 120px;
+    
+}
+.logo-info {
+    width: 65%;
+    margin: 0;
+}
+.logo-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.logo-sub-title{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 0;
+}
+.nav {
+    width: 100%;
+} 
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 36px 0 0 0;
+    
+}
+.nav li {
+    
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav a:hover,
+.nav a:active {
+    text-decoration: underline;
+}
+
+.nav-link{
+    text-decoration: none;
+    color:black;
+}
+
+/********
+USUARIOS 
+*********/
+
+.contenedor-usuarios {
+    display: flex;
+    flex-direction: column;
+}
+.usuario{
+    background-image: radial-gradient(rgb(215, 136, 241),#CA49F5);
+    border: 2px solid black;
+    width: 70%;
+    margin: 15px auto;
+    max-width: 300px; 
+    display: flex;
+    flex-direction: column;  
+} 
+
+.foto{
+    width: 70%;
+    margin: 20px auto 0; 
+}
+.nombre,
+.city{
+    font-size: 18px;
+    width: 70%;
+    margin: 10px auto;
+}
+.nombre-link{
+    width: 50%;
+    margin: 5px auto 10px;
+    padding: 5px 20px;
+    border: 1px solid black;
+    border-radius: 7pt;
+    
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.divBoton{
+    margin: 0 auto;
+}
+.btn-agregar{
+    padding: 5px 20px;
+    border: 1px solid black;
+    border-radius: 7pt;
+}
+
+@media (min-width:600px) {
+    .contenedor-usuarios {
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: center;
+    } 
+    .usuario {
+        margin-left:20px;
+        margin-right: 20px;
+    }
+} 
+
+.realHome,
+.home-subtitle,
+.perfil-usuario {
+    text-align: center;
+}
+
+.perfil-usuario {
+    width: 40%;
+    margin: 30px auto;
+    border: 5px solid #CA49F5;
+    
+}
+.btn-volver {
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 7pt;
+    -webkit-border-radius: 7pt;
+    -moz-border-radius: 7pt;
+    -ms-border-radius: 7pt;
+    -o-border-radius: 7pt;
+    
+    background-color: #FFFFFF;
+
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+
+/*********************
+LOGIN & REGISTRO FORM 
+*********************/
+
+.login {
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+    border: 5px solid #CA49F5;
+    margin-bottom: 1.5em;
+}
+
+.registro {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    border: 5px solid #CA49F5;
+    margin-bottom: 1.5em;
+}
+.registro-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form-input,
+.registro-form-input {
+    border: 1px solid black;
+    border-radius: 7pt;
+    -webkit-border-radius: 7pt;
+    -moz-border-radius: 7pt;
+    -ms-border-radius: 7pt;
+    -o-border-radius: 7pt;
+    
+    background-color: #FFFFFF;
+
+    text-align: center;
+    padding: 10px 25px; 
+    /* opacity: 70%; */
+
+    width: 60%;
+    margin: 10px;
+}
+
+.registro-form-input {
+    width: 80%;  
+}
+
+.login-form-input:hover,
+.login-form-input:focus,
+.registro-form-input:hover,
+.registro-form-input:focus,
+.login-form-btn:hover,
+.login-form-btn:focus {
+
+    transition: transform 250ms;
+    transform: scale(1.1);
+}
+
+.login-form-btn,
+.registro-form-btn {
+    background-image: linear-gradient(to right,rgb(215, 136, 241),#CA49F5);
+    /* background-color: #CA49F5; */
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 100%;
+    cursor: pointer;
+
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.loading {
+    width: 10%;
+    margin: 20px auto;
+    
+}
+
+
+
+
