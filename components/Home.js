@@ -14,7 +14,7 @@ class Home extends Component {
     }
 
     componentDidMount(){
-        fetch("https://jsonplaceholder.typicode.com/users")
+        fetch("https://my-json-server.typicode.com/motita2310/listaDePersonas/posts")
             .then(res => res.json())
             .then(
                 (result) => {

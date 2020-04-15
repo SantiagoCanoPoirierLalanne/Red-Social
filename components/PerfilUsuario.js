@@ -1,6 +1,5 @@
 import React,{useState, useEffect}  from 'react';
 
-import RealHome from './RealHome';
 
 import {useParams,useHistory} from "react-router-dom"
 
@@ -13,7 +12,7 @@ function PerfilUsuario () {
 
     useEffect(
         () => {
-            fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+            fetch(`https://my-json-server.typicode.com/motita2310/listaDePersonas/posts/${id}`)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -39,11 +38,11 @@ function PerfilUsuario () {
                 <h2>Perfil del Usuario</h2> 
                 
                 <div>
+                    <img className='foto' src={datos.img} /> <br/>
                     <p>Nombre: {datos.name}</p> 
                     <p>UserName: {datos.username}</p>
                     <p>Email: {datos.email}</p>
-                    <p>Telefono: {datos.phone}</p>
-                    <p>Website: {datos.website}</p>
+                    <p>Ciudad: {datos.city}</p>
                 </div>
     
                 <button onClick={handleClick} className="btn-volver" >Volver</button>
